@@ -8,6 +8,12 @@ public class QuickSort {
             System.out.print(l);
             System.out.print(" ");
         }
+		nThLargest(3,elements);
+	}
+
+	private static void nThLargest(int i, Integer[] elements) {
+		int nth = elements[elements.length-i];
+		System.out.println("nth largest"+nth);
 	}
 
 	private static void quicksort() {

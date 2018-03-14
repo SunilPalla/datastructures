@@ -2,7 +2,7 @@ package ds;
 
 public class AnagramFinder {
 
-	private static String anagramStr1="listen";
+	private static String anagramStr1="listen  ";
 	private static String anagramStr2="silent";
 
 	public static void main(String[] args) {
@@ -10,6 +10,8 @@ public class AnagramFinder {
 	}
 
 	private static boolean isAnagram() {
+		anagramStr1 = anagramStr1.replaceAll("\\s", "");
+		anagramStr2 = anagramStr2.replaceAll("\\s", "");
 		if(anagramStr1.length()!=anagramStr2.length()){
 			System.out.println("Words are not anagrams");
 			return false;

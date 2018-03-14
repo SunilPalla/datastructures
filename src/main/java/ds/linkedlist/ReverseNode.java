@@ -1,4 +1,4 @@
-package ds;
+package ds.linkedlist;
 
 import corelogic.Node;
 
@@ -9,13 +9,13 @@ public class ReverseNode {
 		ReverseNode.node.next=new Node(2);
 		ReverseNode.node.next.next=new Node(3);
 		ReverseNode.node.next.next.next=new Node(2);
-		ReverseNode.node.next.next.next.next=new Node(1);
-		
-		printList(ReverseNode.node);
+		ReverseNode.node.next.next.next.next=new Node(5);
+
+		NodeUtils.printList(ReverseNode.node);
 		
 		Node reverse = reverse(node);
-		
-		printList(reverse);
+
+		NodeUtils.printList(reverse);
 	}
 
 	public static Node reverse(Node head) {
@@ -32,11 +32,5 @@ public class ReverseNode {
 		return head;
 	}
 	
-	// prints content of double linked list
-    static void printList(Node node) {
-        while (node != null) {
-            System.out.print(node.data + " ");
-            node = node.next;
-        }
-    }
+
 }

@@ -1,4 +1,4 @@
-package ds;
+package ds.linkedlist;
 
 import corelogic.Node;
 
@@ -21,7 +21,7 @@ public class RemoveDupFromSortedLL {
 			}
 			//ReverseNode.printList(current);
 		}
-		ReverseNode.printList(current);
+		NodeUtils.printList(current);
 	}
 
 	static int getCount(Node node) {

@@ -1,4 +1,4 @@
-package ds;
+package ds.linkedlist;
 
 import corelogic.Node;
 
@@ -8,8 +8,8 @@ public class FindMerginPointOfLinkedList {
 	/*function to get the intersection point of two linked
     lists head1 and head2 */
 	int getNode() {
-		int c1 = getCount(head1);
-		int c2 = getCount(head2);
+		int c1 = NodeUtils.getCount(head1);
+		int c2 = NodeUtils.getCount(head2);
 		int d;
 
 		if (c1 > c2) {
@@ -44,42 +44,31 @@ public class FindMerginPointOfLinkedList {
 		return -1;
 	}
 
-	/*Takes head pointer of the linked list and
-   returns the count of nodes in the list */
-	int getCount(Node node) {
-		Node current = node;
-		int count = 0;
-
-		while (current != null) {
-			count++;
-			current = current.next;
-		}
-
-		return count;
-	}
-
 	public static void main(String[] args) {
 		FindMerginPointOfLinkedList list = new FindMerginPointOfLinkedList();
 
 		// creating first linked list
 		list.head1 = new Node(3);
-		list.head1.next = new Node(6);
+		list.head1.next = new Node(10);
 		list.head1.next.next = new Node(15);
-		list.head1.next.next.next = new Node(15);
+		list.head1.next.next.next = new Node(25);
 		list.head1.next.next.next.next = new Node(30);
 
 		// creating second linked list
-		list.head2 = new Node(10);
+		list.head2 = new Node(4);
 		list.head2.next = new Node(15);
-		list.head2.next.next = new Node(30);
+		list.head2.next.next = new Node(25);
+		//list.head2.next.next.next = new Node(30);
+		//list.head2.next.next.next.next = new Node(35);
+
 
 		System.out.println("The node of intersection is " + list.getNode());
-		//System.out.println("The merge point is " + list.getMergePoint());
+		System.out.println("The merge point is " + list.getMergePoint());
 	}
 	
 	private int getMergePoint() {
-		int c1 = getCount(head1);
-		int c2 = getCount(head2);
+		int c1 = NodeUtils.getCount(head1);
+		int c2 = NodeUtils.getCount(head2);
 		if(c1>c2){
 			return mergePoint(c1,c2,head1,head2);
 		}else{

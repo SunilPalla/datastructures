@@ -8,7 +8,7 @@ public class FindMergingPointUsingLL {
 	static LinkedList<String> list1 = new LinkedList<String>();
 	static LinkedList<String> list2 = new LinkedList<String>();
 	static int count=0;
-	static{
+	static {
 		list1.add("3");
 		list1.add("6");
 		list1.add("15");
@@ -17,6 +17,7 @@ public class FindMergingPointUsingLL {
 		
 		list2.add("10");
 		list2.add("12");
+		list2.add("15");
 		list2.add("35");
 	}
 	public static void main(String[] args) {

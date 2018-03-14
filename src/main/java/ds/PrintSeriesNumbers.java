@@ -3,7 +3,7 @@ package ds;
 public class PrintSeriesNumbers {
 
 	public static void main(String[] args) {
-		printSeries(1000000000);
+		printSeries(25);
 	}
 
 	private static void printSeries(int i) {

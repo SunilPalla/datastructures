@@ -1,4 +1,4 @@
-package ds;
+package ds.linkedlist;
 
 import corelogic.Node;
 
@@ -20,9 +20,9 @@ public class CheckLLForPalindrome {
 		int c = getCount(head1);
 		Node midNode = new Node();
 		midNode = middleNode(head1);
-		ReverseNode.printList(head1);
+		NodeUtils.printList(head1);
 		Node reversedNode = ReverseNode.reverse(midNode);
-		ReverseNode.printList(reversedNode);
+		NodeUtils.printList(reversedNode);
 		boolean isIdentical = compareLists(head1,reversedNode);
 		System.out.println("Is Pallindrome::"+isIdentical);
 	}

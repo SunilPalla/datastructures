@@ -3,10 +3,22 @@ package ds;
 public class FibonocciSeries {
 
 	public static void main(String[] args) {
-		printFibonocci(20);
+		printFibonocci(10);
+		printNthFibonocci(10);
 	}
+
+	private static void printNthFibonocci(int nThFibonocci) {
+		int prev=0;int current=1;int next=0;
+		for(int i=2;i<nThFibonocci;i++) {
+			next = prev+current;
+			prev = current;
+			current = next;
+		}
+		System.out.println("nth"+next);
+	}
+
 	private static void printFibonocci(int limit) {
-		//0,1,1,2,3,5,8,13,21....
+		//0,1,1,2,3,5,8,13,21,34,55,89....
 		int array[]=new int[limit];
 		int prev=0;int current=1;int next=0;
 		array[0]=0;array[1]=current;
